@@ -1,9 +1,7 @@
 all: index.html bookmarklet.min.js bookmarklet.js
 
 index.html: bookmarklet.min.js
-	sed 's/javascript:(function(){/function colourblind(){/;s/})();/}/' $< > tmp
-	perl -i -pe '$$text=`cat tmp`; chomp($$text); s/function colourblind.*/$$text/' $@
-	rm tmp
+	perl -i -MHTML::Entities -pe '$$text=HTML::Entities::encode_entities(`cat $<`); chomp($$text); s/href=".*"/href="$$text"/' $@
 
 bookmarklet.min.js: bookmarklet.js
 	echo -n 'javascript': > $@
