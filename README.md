@@ -6,7 +6,8 @@ http://web.archive.org/web/20081014161121/http://www.colorjack.com/labs/colormat
 
 They may be inaccurate. Corrections welcome.
 
-To use it, simply put the contents of bookmarklet.min.js into a bookmark.
+To use it, simply put the contents of bookmarklet.min.js into a bookmark or
+go to <https://altreus.github.io/colourblind/> to see a demo.
 
 This will only work on browsers that support SVG filters in CSS3 - but you
 don't really need to cross-browser test it for colourblindness so you only need
