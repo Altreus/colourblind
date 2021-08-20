@@ -13,7 +13,6 @@
     <title>Testing your Type</title>
 
     <style>
-
 .container {
  float:left;
   display: flex;
@@ -43,19 +42,26 @@ height: auto;
 }
 
 
-        img {
-        overflow: hidden;
-            margin: 0 auto;
-
-         width: 300px;
-            height: 300px;
-            }
             .column {
   float: left;
   width: 33.33%;
   padding: 10px;
 }
 
+.gks {
+            width: 300px;
+            height: 300px;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+.gks img {
+            width: 100%;
+            transition: 0.5s all ease-in-out;
+        }
+
+        .gks:hover img {
+            transform: scale(1.5);
+        }
 
 
 
@@ -63,11 +69,11 @@ height: auto;
 
 </head>
 <body>
-<div>
+<div class="gks">
     <center>
         <p>Original Design</p>
         <img src="https://images.squarespace-cdn.com/content/v1/5ea878e2f5f81e5952dc00ee/1596575116825-7UYBAPBB5EOK3KKUAKGQ/Landing+Page_v2.png?format=750w"
-             alt="Geeks Image" class="img-rounded img-fluid"/>
+             alt="Gks Image" class="img-rounded img-fluid"/>
     </center>
 </div>
 <!-- normal done-->
@@ -75,51 +81,52 @@ height: auto;
     <center>Which among these images below, match the above image according to you!!?</center>
 </h2>
 <div class="row">
-    <div class="geeks column">
+    <div class="gks column">
         <p>Protanopia Vision</p>
         <img src="https://images.squarespace-cdn.com/content/v1/5ea878e2f5f81e5952dc00ee/1596575470107-57GXF6DYZ6E7JIDLYS49/Protanopia+vision.png?format=750w"
-             alt="Geeks Image" class="img-rounded img-fluid"/>
+             alt="Gks Image" class="img-rounded img-fluid"/>
 
     </div>
     <!--protanopia done-->
 
-    <div class="column">
+    <div class="gks column">
         <p>Protanomaly Vision</p>
         <img src="https://images.squarespace-cdn.com/content/v1/5ea878e2f5f81e5952dc00ee/1596575785375-J6WMC683I0GWI27IXP9X/Protanomaly+vision.png?format=750w"
-             alt="Geeks Image" class="img-rounded img-fluid"/>
+             alt="Gks Image" class="img-rounded img-fluid"/>
     </div>
     <!--protanomaly done-->
 
-    <div class="column">
+    <div class="gks column">
         <p>Deuteranopia Vision</p>
         <img src="https://images.squarespace-cdn.com/content/v1/5ea878e2f5f81e5952dc00ee/1596575381038-PRSKOIJS084YAB5OPSH7/Deuteranopia+vision.png?format=750w"
-             alt="Geeks Image" class="img-rounded img-fluid"/>
+             alt="Gks Image" class="img-rounded img-fluid"/>
     </div>
 
-    <div class="column">
+    <div class="gks column">
         <p>Deuteranomaly Vision</p>
         <img src="https://images.squarespace-cdn.com/content/v1/5ea878e2f5f81e5952dc00ee/1596575425710-0HK345F3BUOAB7WQOH0G/Deuteranomaly+vision.png?format=750w"
-             alt="Geeks Image" class="img-rounded img-fluid"/>
+             alt="Gks Image" class="img-rounded img-fluid"/>
     </div>
-    <div class="column">
+    <hr>
+    <div class="gks column">
         <p>Tritanopia Vision</p>
         <img src="https://images.squarespace-cdn.com/content/v1/5ea878e2f5f81e5952dc00ee/1596575821752-JMZ8YLNBOW5D2FRL8RVG/Tritanopia+vision.png?format=750w"
-             alt="Geeks Image" class="img-rounded img-fluid"/>
+             alt="Gks Image" class="img-rounded img-fluid"/>
     </div>
-    <div class="column">
+    <div class="gks column">
         <p>Tritanomaly Vision</p>
         <img src="https://images.squarespace-cdn.com/content/v1/5ea878e2f5f81e5952dc00ee/1596575327915-4JN92DJNPQ9WKG2ZPL8D/Tritanomaly+vision.png?format=750w"
-             alt="Geeks Image" class="img-rounded img-fluid"/>
+             alt="Gks Image" class="img-rounded img-fluid"/>
     </div>
-    <div class="column">
+    <div class="gks column">
         <p>Achromatopsia Vision</p>
         <img src="https://images.squarespace-cdn.com/content/v1/5ea878e2f5f81e5952dc00ee/1596576589204-TYIN4G6TMQ93ZUGF2OGB/Achromatopsia+vision.png?format=750w"
-             alt="Geeks Image" class="img-rounded img-fluid"/>
+             alt="Gks Image" class="img-rounded img-fluid"/>
     </div>
-    <div class="column">
+    <div class="gks column">
         <p>Achromatomaly Vision</p>
         <img src="https://images.squarespace-cdn.com/content/v1/5ea878e2f5f81e5952dc00ee/1596576550298-QVN1FV77DER00JX9FAJ3/Achromatomaly+vision.png?format=750w"
-             alt="Geeks Image" class="img-rounded img-fluid"/>
+             alt="Gks Image" class="img-rounded img-fluid"/>
     </div>
 </div>
 </body>
