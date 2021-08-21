@@ -9,7 +9,8 @@
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
+<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Testing your Type</title>
 
     <style>
@@ -62,13 +63,184 @@ height: auto;
         .gks:hover img {
             transform: scale(1.5);
         }
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.bu1 {
+  background: #fff;
+  border-radius: 6px;
+  display: inline-block;
+  padding: 10px;
+  text-align: center;
+  max-width: 150px;
+  text-decoration: none;
+}
+.bu1 img{
+height: 20%;
+width: 20%
+}
 
+.ex button:hover {
+  background-color: yellow;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+}
+.headtext{
+ color: white;
+text-align: center;
+font-size: 30px;
+}
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+.header{
+background: #000;
+    border-bottom: 2px solid #E2E8F0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+}
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item {
+    margin-left: 6rem;
+}
+
+.nav-link{
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #477569;
+}
+
+.nav-link:hover{
+    color: #482ff7;
+}
+
+.nav-logo {
+    font-size: 2.1rem;
+    font-weight: 500;
+    color: #482ff7;
+}
+@media only screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 15rem;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 0.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+}
 
 
     </style>
 
 </head>
+
 <body>
+<header class="header">
+        <nav class="navbar">
+            <button class="nav-toggle" aria-expanded="false" aria-controls="menu">
+               <img  class="ss" src="img/logo.jpg" alt="Logo">
+            </button>
+            <div class="headtext">
+                <h2>COLOUR BLIND AWARENESS</h2>
+            </div>
+            <ul class="nav-menu ex" >
+                <li class="nav-item">
+                    <a href="basic.html">
+                    <button class="bu1">
+                     <img  src="img/img.png" width="5%" height="5%" />
+                       Home
+                    </button>
+                        </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="index.html">
+                    <button class="bu1">
+                     <img src="img/img_3.png" width="5%" height="5%" />
+                        Bookmark
+                    </button>
+                        </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="testcolorblind.html">
+                    <button class="bu1">
+                     <img  src="img/img_4.png" width="5%" height="5%" />
+                        Test
+                    </button>
+                      </a>
+                </li>
+            </ul>
+            <button class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </nav>
+</header>
 <div class="gks">
     <center>
         <p>Original Design-Type 0</p>
@@ -129,6 +301,26 @@ height: auto;
              alt="Gks Image" class="img-rounded img-fluid"/>
     </div>
 </div>
+<script>
+        const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+
+hamburger.addEventListener("click", mobileMenu);
+
+function mobileMenu() {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+}
+
+const navLink = document.querySelectorAll(".nav-link");
+
+navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+function closeMenu() {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+}
+    </script>
 </body>
 </html>
 
