@@ -1,39 +1,68 @@
 <!DOCTYPE html>
 
-<html>
-    <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8"0>
- <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<html lang="en">
 
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Testing your Type</title>
 
-
     <style>
-        .bodydiv {
-            color: #333;
-            max-width: 37em;
-            margin: 0 auto;
-            padding: 1em;
+.container {
+ float:left;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
 
-        }
-        img {
-            width: 100%;
-        }
-        .ax {
-font-size: 30px;
-            display: block;
-            border: 3px dashed;
-            text-align: center;
-        }
-        .image {
+img {
+  max-width: 100%
+}
+   .column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+}
+
+
+.image {
   flex-basis: 10%
 height: auto;
 }
 
+
+    .responsive {
+  width: 100%;
+  height: auto;
+}
+
+
+            .column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+}
+
+.gks {
+            width: 300px;
+            height: 300px;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+.gks img {
+            width: 100%;
+            transition: 0.5s all ease-in-out;
+        }
+
+        .gks:hover img {
+            transform: scale(1.5);
+        }
  * {
     margin: 0;
     padding: 0;
@@ -72,10 +101,6 @@ li {
 
 a {
     text-decoration: none;
-}
-.ee {
-width:350px;
-height:320px
 }
 .header{
 background: #000;
@@ -166,8 +191,12 @@ background: #000;
     }
 
 }
- </style>
- </head>
+
+
+    </style>
+
+</head>
+
 <body>
 <header class="header">
         <nav class="navbar">
@@ -212,13 +241,67 @@ background: #000;
             </button>
         </nav>
 </header>
+<div class="gks">
+    <center>
+        <p>Original Design-Type 0</p>
+        <img src="https://images.squarespace-cdn.com/content/v1/5ea878e2f5f81e5952dc00ee/1596575116825-7UYBAPBB5EOK3KKUAKGQ/Landing+Page_v2.png?format=750w"
+             alt="Gks Image" class="img-rounded img-fluid"/>
+    </center>
+</div>
+<!-- normal done-->
+<h2>
+    <center>Which among these images below, match the above image according to you!!?</center>
+</h2>
+<div class="row">
+    <div class="gks column">
+        <p>Protanopia Vision-Type 1</p>
+        <img src="https://images.squarespace-cdn.com/content/v1/5ea878e2f5f81e5952dc00ee/1596575470107-57GXF6DYZ6E7JIDLYS49/Protanopia+vision.png?format=750w"
+             alt="Gks Image" class="img-rounded img-fluid"/>
 
-    <div class="bodydiv">
-        <img class="ee" src="https://th.bing.com/th/id/OIP.Tk261v2X4LnT2-1NMWGWqwHaFj?w=237&h=180&c=7&o=5&dpr=1.25&pid=1.7">
-        <a class="ax" href="javascript:(function(){var s=document.getElementById(&quot;colourblind-styling&quot;);var x=document.getElementById(&quot;colourblind-filters&quot;);if(!s){s=document.createElement(&quot;style&quot;);document.body.appendChild(s)}if(!x){x=document.createElement(&quot;div&quot;);x.setAttribute(&quot;style&quot;,&quot;height: 0; padding: 0; margin: 0; line-height: 0;&quot;);x.innerHTML=&#39;&lt;svg id=&quot;colorblind-filters&quot; style=&quot;display: none&quot;&gt; &lt;defs&gt; &lt;filter id=&quot;protanopia&quot;&gt; &lt;feColorMatrix type=&quot;matrix&quot; values=&quot;0.567,0.433,0,0,0 0.558,0.442,0,0,0 0 0.242,0.758,0,0 0,0,0,1,0&quot; in=&quot;SourceGraphic&quot; /&gt; &lt;/filter&gt; &lt;filter id=&quot;protanomaly&quot;&gt; &lt;feColorMatrix type=&quot;matrix&quot; values=&quot;0.817,0.183,0,0,0 0.333,0.667,0,0,0 0,0.125,0.875,0,0 0,0,0,1,0&quot; in=&quot;SourceGraphic&quot; /&gt; &lt;/filter&gt; &lt;filter id=&quot;deuteranopia&quot;&gt; &lt;feColorMatrix type=&quot;matrix&quot; values=&quot;0.625,0.375,0,0,0 0.7,0.3,0,0,0 0,0.3,0.7,0,0 0,0,0,1,0&quot; in=&quot;SourceGraphic&quot; /&gt; &lt;/filter&gt; &lt;filter id=&quot;deuteranomaly&quot;&gt; &lt;feColorMatrix type=&quot;matrix&quot; values=&quot;0.8,0.2,0,0,0 0.258,0.742,0,0,0 0,0.142,0.858,0,0 0,0,0,1,0&quot; in=&quot;SourceGraphic&quot; /&gt; &lt;/filter&gt; &lt;filter id=&quot;tritanopia&quot;&gt; &lt;feColorMatrix type=&quot;matrix&quot; values=&quot;0.95,0.05,0,0,0 0,0.433,0.567,0,0 0,0.475,0.525,0,0 0,0,0,1,0&quot; in=&quot;SourceGraphic&quot; /&gt; &lt;/filter&gt; &lt;filter id=&quot;tritanomaly&quot;&gt; &lt;feColorMatrix type=&quot;matrix&quot; values=&quot;0.967,0.033,0,0,0 0,0.733,0.267,0,0 0,0.183,0.817,0,0 0,0,0,1,0&quot; in=&quot;SourceGraphic&quot; /&gt; &lt;/filter&gt; &lt;filter id=&quot;achromatopsia&quot;&gt; &lt;feColorMatrix type=&quot;matrix&quot; values=&quot;0.299,0.587,0.114,0,0 0.299,0.587,0.114,0,0 0.299,0.587,0.114,0,0 0,0,0,1,0&quot; in=&quot;SourceGraphic&quot; /&gt; &lt;/filter&gt; &lt;filter id=&quot;achromatomaly&quot;&gt; &lt;feColorMatrix type=&quot;matrix&quot; values=&quot;0.618,0.320,0.062,0,0 0.163,0.775,0.062,0,0 0.163,0.320,0.516,0,0 0,0,0,1,0&quot; in=&quot;SourceGraphic&quot; /&gt; &lt;/filter&gt; &lt;/defs&gt; &lt;/svg&gt;&#39;;document.body.appendChild(x)}var l=[&quot;protanopia&quot;,&quot;protanomaly&quot;,&quot;deuteranopia&quot;,&quot;deuteranomaly&quot;,&quot;tritanopia&quot;,&quot;tritanomaly&quot;,&quot;achromatopsia&quot;,&quot;achromatomaly&quot;];var p=&quot;&quot;;for(var i in l)p+=parseInt(i)+1+&quot;: &quot;+l[i]+&quot;; &quot;;var c=parseInt(prompt(&quot;0: off; &quot;+p))-1;if(isNaN(c))return;if(c&gt;=l.length)return;if(c==-1){s.innerHTML=&quot;body{-webkit-filter:none;-moz-filter:none;-ms-filter:none;-o-filter:none;filter:none;}&quot;;return}c=l[c];if(document.getElementById(c))s.innerHTML=&quot;body{-webkit-filter:!!;-moz-filter:!!;-ms-filter:!!;-o-filter:!!;filter:!!;}&quot;.replace(/!!/g,&quot;url(#&quot;+c+&quot;)&quot;);else s.innerHTML=&quot;body{-webkit-filter:none;-moz-filter:none;-ms-filter:none;-o-filter:none;filter:none;}&quot;})();">Colour Blind</a>
-        <p class="ax">Simply drag this link to you bookmarks bar or try by just clicking it.</p>
     </div>
-    <script>
+    <!--protanopia done-->
+
+    <div class="gks column">
+        <p>Protanomaly Vision-Type 2</p>
+        <img src="https://images.squarespace-cdn.com/content/v1/5ea878e2f5f81e5952dc00ee/1596575785375-J6WMC683I0GWI27IXP9X/Protanomaly+vision.png?format=750w"
+             alt="Gks Image" class="img-rounded img-fluid"/>
+    </div>
+    <!--protanomaly done-->
+
+    <div class="gks column">
+        <p>Deuteranopia Vision-Type 3</p>
+        <img src="https://images.squarespace-cdn.com/content/v1/5ea878e2f5f81e5952dc00ee/1596575381038-PRSKOIJS084YAB5OPSH7/Deuteranopia+vision.png?format=750w"
+             alt="Gks Image" class="img-rounded img-fluid"/>
+    </div>
+
+    <div class="gks column">
+        <p>Deuteranomaly Vision-Type 4</p>
+        <img src="https://images.squarespace-cdn.com/content/v1/5ea878e2f5f81e5952dc00ee/1596575425710-0HK345F3BUOAB7WQOH0G/Deuteranomaly+vision.png?format=750w"
+             alt="Gks Image" class="img-rounded img-fluid"/>
+    </div>
+    <hr>
+    <div class="gks column">
+        <p>Tritanopia Vision-Type 5</p>
+        <img src="https://images.squarespace-cdn.com/content/v1/5ea878e2f5f81e5952dc00ee/1596575821752-JMZ8YLNBOW5D2FRL8RVG/Tritanopia+vision.png?format=750w"
+             alt="Gks Image" class="img-rounded img-fluid"/>
+    </div>
+    <div class="gks column">
+        <p>Tritanomaly Vision-Type 6</p>
+        <img src="https://images.squarespace-cdn.com/content/v1/5ea878e2f5f81e5952dc00ee/1596575327915-4JN92DJNPQ9WKG2ZPL8D/Tritanomaly+vision.png?format=750w"
+             alt="Gks Image" class="img-rounded img-fluid"/>
+    </div>
+    <div class="gks column">
+        <p>Achromatopsia Vision-Type 7</p>
+        <img src="https://images.squarespace-cdn.com/content/v1/5ea878e2f5f81e5952dc00ee/1596576589204-TYIN4G6TMQ93ZUGF2OGB/Achromatopsia+vision.png?format=750w"
+             alt="Gks Image" class="img-rounded img-fluid"/>
+    </div>
+    <div class="gks column">
+        <p>Achromatomaly Vision-Type 8</p>
+        <img src="https://images.squarespace-cdn.com/content/v1/5ea878e2f5f81e5952dc00ee/1596576550298-QVN1FV77DER00JX9FAJ3/Achromatomaly+vision.png?format=750w"
+             alt="Gks Image" class="img-rounded img-fluid"/>
+    </div>
+</div>
+<script>
         const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
 
@@ -238,5 +321,7 @@ function closeMenu() {
     navMenu.classList.remove("active");
 }
     </script>
-    </body>
+</body>
 </html>
+
+

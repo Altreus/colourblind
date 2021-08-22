@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.bu1 {
+  background: #fff;
+  border-radius: 6px;
+  display: inline-block;
+  padding: 10px;
+  text-align: center;
+  max-width: 150px;
+  text-decoration: none;
+}
+.bu1 img{
+height: 20%;
+width: 20%
+}
+
+.ex button:hover {
+  background-color: yellow;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+}
+.headtext{
+ color: white;
+text-align: center;
+font-size: 30px;
+}
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+.header{
+background: #000;
+    border-bottom: 2px solid #E2E8F0;
+}
+ul {
+            list-style-image: url(
+"https://contribute.geeksforgeeks.org/wp-content/uploads/listitem-1.png");
+        }
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+}
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ul.list{
+    margin-left: 20px;
+    color: deeppink;
+}
+
+.nav-item {
+    margin-left: 6rem;
+}
+
+.nav-link{
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #477569;
+}
+
+.nav-link:hover{
+    color: #482ff7;
+}
+
+.nav-logo {
+    font-size: 2.1rem;
+    font-weight: 500;
+    color: #482ff7;
+}
+@media only screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 15rem;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 0.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+}
+
+    </style>
+
+</head>
+<body>
+<header class="header">
+        <nav class="navbar">
+            <button class="nav-toggle" aria-expanded="false" aria-controls="menu">
+               <img  class="ss" src="img/logo.jpg" alt="Logo">
+            </button>
+            <div class="headtext">
+                <h2>COLOUR BLIND AWARENESS</h2>
+            </div>
+            <ul class="nav-menu ex" >
+                <li class="nav-item">
+                    <a href="basic.html">
+                    <button class="bu1">
+                     <img  src="img/img.png" width="5px" height="5px"  alt="im"/>
+                       Home
+                    </button>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="index.html">
+                    <button class="bu1">
+                     <img src="img/img_3.png" width="5px" height="5px" alt="a"/>
+                        Bookmark
+                    </button>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="testcolorblind.html">
+                    <button class="bu1">
+                     <img  src="img/img_4.png" width="5px" height="5px" alt="s" />
+                        Test
+                    </button>
+                    </a>
+                </li>
+            </ul>
+            <button class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </nav>
+</header>
+
+<script>
+        const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+
+hamburger.addEventListener("click", mobileMenu);
+
+function mobileMenu() {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+}
+
+const navLink = document.querySelectorAll(".nav-link");
+
+navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+function closeMenu() {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+}
+    </script>
+<br>
+<br>
+<h1  style="color: red; font-size: 20px;"><center>What is Color Blindness</center></h1>
+<br>
+<br>
+<p><h3 style="color: black; font-size: 20px;">Color blindness is the inability to differentiate certain colors. It comes in various flavours with the most
+common being red green color blindness. There are multiple causes, but color blindness is primarily inherited by
+way of a mutated X Chromosome. Due to the fact that men only have one X chromosome, if they are handed a faulty X chromosome (by a carrier mother) they will be color blind. Women on the other hand have two X chromosomes, which is why many less women are color blind than men.  The odds that both X chromosomes are faulty is extremely low, and the healthy one will take precedence
+    providing normal perception of color.</p></h3>
+
+<br>
+<br>
+<h1  style="color: red; font-size: 20px;"><center>Common Types of Color Blindness</center></h1>
+<h1  style="font-size: 20px;"><b>Color blindness comes in the following types:</b></h1>
+<ul class="list" style="list-style-type:disc" >
+      <li style="font-size: 20px;">Red Green Color Blind(most common)</li>
+        <ul class="list" style="list-style-type:disc" >
+           <li style="font-size: 20px;">Dichromacy (protanopia and deuteranopia)</li>
+            <li style="font-size: 20px;">Anomalous trichromacy (protanomaly and deuteranomaly)</li>
+         </ul>
+    <li style="font-size: 20px;">Blue Yellow Color Blind</li>
+       <ul class="list" style="list-style-type:disc" >
+          <li style="font-size: 20px;">Dichromacy (tritanopia)</li>
+          <li style="font-size: 20px;">Anomalous trichromacy (tritanomaly)</li>
+        </ul>
+    <li style="font-size: 20px;">Total Color Blindness (least common)</li>
+</ul>
+<br>
+<br>
+<h1  style="color: red; font-size: 20px;"><center>Color Blindness types</center></h1>
+<h1  style="color: red; font-size: 20px;">Blue and Green</h1>
+<img src="https://www.colour-blindness.com/wp-content/uploads/redgreen1-copy1.png">
+<h1  style="color: red; font-size: 20px;">Green Color Blindness – Deuteranopia & Deuteranomaly</h1>
+<p><h3 style="color: black; font-size: 20px;">Green color blindness is by far the most common form; around 6% of the total male
+    population is green color blind – primarily as a mild deficiency.</p></h3>
+<br>
+<br>
+<p><h3 style="color: black; font-size: 20px;">As with red color blindness, green color blind people can be categorised in two groups:
+<br>
+Deuteranopia: the M-cones are missing, or non-functional, resulting in blindness to the
+green portion of the spectrum. 5% of males and 0.1% of females suffer this form of green
+color blindness.
+    <br>
+Deuteranomaly: The M-Cones are defective, operating below normal capacity to interfere
+with a person’s ability to see some shades of green, shifting color sensitivity toward
+the red sensitive L-cones. 1% of males and 0.35% of females suffer this form.</p></h3>
+<br>
+<br>
+<h1  style="color: red; font-size: 20px;">Blue and Yellow</h1>
+<img src="https://www.colour-blindness.com/wp-content/uploads/blueyellow.png">
+<p><h3 style="color: black; font-size: 20px;">Blue yellow color blindness is quite uncommon, and the name itself taken as a
+description is actually quite misleading. People who are blue yellow color blind
+will confuse some shades of blue with green, and some shades of yellow with violet.
+Much like red green color blindness, those who are blue yellow color blind can be
+categorised in two ways. However, unlike red and green color blindness, blue yellow
+color blindness is not more prominent in males, as the gene that causes the S cones to
+be absent or defective is not found on
+the X chromosome, but rather chromosome 7.</p></h3>
+<h1  style="color: red; font-size: 20px;">Blue Yellow Color Blindness</h1>
+p><h3 style="color: black; font-size: 20px;">Tritanopia: the S-cones are missing or non-functional, resulting in blindness to the blue end of the spectrum.
+Tritanomaly: the s-cones are defective, operating below normal capacity to interfere with a person’s ability
+to see some shades of blue.</p></h3>
+
+
+
+
+<h1  style="color: red; font-size: 20px;"><center>Living with Color Blindness</center></h1>
+<br>
+<br>
+<p><h3 style="color: black; font-size: 20px;">Living with color blindness can be anything from trivial to frustrating, and
+sometimes even dangerous. Some people go their entire lives not knowing they were
+actually mildly color blind, whereas some are reminded daily of the inconveniences and
+risks of their disability.</p></h3>
+<br>
+<br>
+
+<p><h3 style="color: black; font-size: 20px;">Reminders come in the form of not knowing whether you’re looking at a stop or go
+traffic light, not knowing if your steak is cooked, or whether or not the tomato you
+wanted to use is ripe or not. But for some perhaps the biggest frustration is not being
+able to pursue the career you always dreamt of. Many arts based careers such as design
+can be nearly impossible for those with color blindness, while some such as being an air
+force pilot
+simply aren’t allowed.</p></h3>
+</body>
+</html>
